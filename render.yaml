@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ehsan-api
+    env: python
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: TRANSFORMERS_CACHE
+        value: "/mnt/data/transformers-cache"
