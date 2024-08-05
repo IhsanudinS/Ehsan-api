@@ -14,7 +14,7 @@ CORS(app)
 
 logging.basicConfig(level=logging.DEBUG)
 
-processor = Wav2Vec2Processor.from_pretrained("sankun/wav2vec2-quran", token='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')
+processor = Wav2Vec2Processor.from_pretrained("sankun/wav2vec2-quran")
 model = Wav2Vec2ForCTC.from_pretrained("sankun/wav2vec2-quran")
 
 # Fungsi untuk menghapus tanda-tanda waqof dan tanda ayat sajdah
